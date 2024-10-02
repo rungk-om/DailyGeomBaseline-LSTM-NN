@@ -1,0 +1,61 @@
+Recommended steps for setting up environments via terminal (command line) 
+
+(Last check: 1 October 2024) 
+
+1.  Download Python 3.9.12
+    
+2.  Install TensorFlow for CPU-only or GPU by following the instruction here https://docs.anaconda.com/free/anaconda/applications/tensorflow/. 
+    
+3.  With the conda tensorflow activated, set up a virtual environment with Python version in step 1. See the instructions from https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/. Check if you have the expected Python version as the computer may confuse the Python paths.
+    
+4.  Copy the file ‘requirements.txt’ to your working directory. Activate the virtual environment you set up in Step 3 and run 'pip install -r requirements.txt’ in your terminal.
+    
+After step 4 you should have “tensorflow”, “keras”, and “sklearn” with the versions I use for running my code.
+
+For running the Jupyter notebooks, we will have to add the virtual environment as a ‘kernel’ to run the Jupyter notebook also. The notebook employs "Tensorboard" to track the loss curve during the model training.
+
+5.  In your working directory with the virtual environment activated, type 'ipython kernel install --user --name=venv’ (change the name of the environment as appropriate). This step should add the virtual environment to the Jupyter kernel.
+    
+6.  Run ‘jupyter notebook’ in your terminal. This should launch Jupyter notebook in a web browser.
+    
+7.  Change the ‘kernel’ to your virtual environment. (Note: if this doesn't work, see the solution by ClimbsRocks in https://stackoverflow.com/questions/42449814/running-jupyter-notebook-in-a-virtualenv-installed-sklearn-module-not-available)
+    
+8.  Test if all the dependencies are installed correctly by executing the first cell with the commands below.
+    
+
+—  
+from numpy import mean  
+from numpy import std  
+import pandas as pd  
+import matplotlib.pyplot as plt  
+import matplotlib.dates as mdates  
+import numpy as np
+
+from sklearn.preprocessing import MinMaxScaler  
+from sklearn.metrics import mean_squared_error  
+from keras.models import Sequential  
+from keras.layers import LSTM  
+from keras.layers import Dense  
+from keras.layers import Dropout  
+from keras.utils.vis_utils import plot_model  
+from keras import optimizers
+
+# Load the TensorBoard notebook extension
+
+%load_ext tensorboard  
+import tensorflow as tf  
+import datetime
+
+—
+Any missing modules can be installed manually by closing the notebook, then pip install in your terminal with the virtual environment on, then maybe repeat steps 5 - 8 if the notebook doesn’t see the python module.
+
+Possible problems and fixes 
+
+Problem: jupyter notebook not found
+After activating conda and keras-env (the environment in step 5), type
+
+```
+`pip install notebook `
+then follow step 5.
+```
+
