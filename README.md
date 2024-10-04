@@ -16,12 +16,23 @@ Suggestions for setting up the Python environments (conda, tensorflow, keras) ca
 
 We utilise the geomagnetic measurements available from [INTERMAGNET](https://intermagnet.org/), then processed through the filtering technique as described by [Haberle et al. 2022](http://doi.org10.1029/2022JA030407). We train the neural networks using the daily filter data (the sum of 24h, 12h, 8h, and 6h harmonics) at 1 hour cadence as the target, at 1 hour cadence produced using the decimation. The independent or input variables (hourly cadence) consist of the local time, solar zenith angle, the Sun-Earth distance, and the solar radio flux F10.7. The neural networks take 12 hour sequence of the inputs to produce 1 hour forecast of the quiet daily variation. 
 
-Data can be found under Data/. There is a single CSV file with columns:
-LT: Local Time in hour (0 to 23)
-SZA: Solar Zenith Angle (in degrees, 0 to 359)
-DistSE: Distance between the Sun and Earth (in Astronomical Units) 
-F10.7: Solar radio flux corrected to L1 downloaded from OMNI database (see https://cdaweb.gsfc.nasa.gov/)
+Data can be found under **Data/***. There is a single CSV file with columns:
 
-The codes may be adapted to use with other ground magnetic observatories. Our codes are under MIT license; you may adapt ours and acknowledge us with the following DOI: 
+1. LT: Local Time in hour (0 to 23)
+
+2. SZA: Solar Zenith Angle (in degrees, 0 to 359)
+
+3. DistSE: Distance between the Sun and Earth (in Astronomical Units) 
+
+4. F10.7: Solar radio flux corrected to L1 downloaded from OMNI database (see https://cdaweb.gsfc.nasa.gov/)
+
+5. xD: The X-component (geographic north) of the daily filter (fD)
+
+6. yD: The Y-component (geographic east) of the daily filter (fD)
+
+7. zD: The Z-component (geographic down, towards Earth core) of the daily filter (fD). 
+
+The codes may be adapted to use with other ground magnetic observatories. 
+Our codes are under MIT license; you may adapt ours and acknowledge us with the following DOI: 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13881560.svg)](https://doi.org/10.5281/zenodo.13881560). 
 
