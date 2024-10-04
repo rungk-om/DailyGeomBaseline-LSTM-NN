@@ -16,7 +16,7 @@ Suggestions for setting up the Python environments (conda, tensorflow, keras) ca
 
 We utilise the geomagnetic measurements available from [INTERMAGNET](https://intermagnet.org/), then processed through the filtering technique as described by [Haberle et al. 2022](http://doi.org10.1029/2022JA030407). We train the neural networks using the daily filter data (the sum of 24h, 12h, 8h, and 6h harmonics) at 1 hour cadence as the target, at 1 hour cadence produced using the decimation. The independent or input variables (hourly cadence) consist of the local time, solar zenith angle, the Sun-Earth distance, and the solar radio flux F10.7. The neural networks take 12 hour sequence of the inputs to produce 1 hour forecast of the quiet daily variation. 
 
-Data can be found under **Data/***. There is a single CSV file with columns:
+Data can be found under **Data/**. There is a CSV file with the columns:
 
 1. LT: Local Time in hour (0 to 23)
 
