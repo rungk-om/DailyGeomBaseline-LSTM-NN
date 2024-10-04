@@ -32,7 +32,6 @@ Data can be found under **Data/***. There is a single CSV file with columns:
 
 7. zD: The Z-component (geographic down, towards Earth core) of the daily filter (fD). 
 
-The codes may be adapted to use with other ground magnetic observatories. 
-Our codes are under MIT license; you may adapt ours and acknowledge us with the following DOI: 
+Our codes are under MIT license; you may use or adapt our codes with acknowledgements to 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13881560.svg)](https://doi.org/10.5281/zenodo.13881560). 
 
