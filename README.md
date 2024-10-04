@@ -10,7 +10,7 @@ The neural networks consist of multiple-layers and several nodes of LSTM (Long S
 
 There are two Jupyter Notebooks: 
 1. **DailyQuietVariation_LSTM_Initial.ipynb** <- This is to create an initial model of the quiet daily variation.
-2. **DailyQuietVariation_LSTM_WalkForward.ipynb*** <- This is to update the initial model using the Walk Forward validation. 
+2. **DailyQuietVariation_LSTM_WalkForward.ipynb** <- This is to update the initial model using the Walk Forward validation. 
 
 Suggestions for setting up the Python environments (conda, tensorflow, keras) can be found in 'instruction.txt'. 
 
